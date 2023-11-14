@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let vc = UIViewController()
         //vc.view.backgroundColor = .appYellow
-        window?.rootViewController = LoginVC()
+        window?.rootViewController = LoginAssembler.make()//LoginVC()
         window?.makeKeyAndVisible()
     }
 

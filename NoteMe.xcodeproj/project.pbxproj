@@ -16,6 +16,14 @@
 		EDA1F4F32AE8383E007ADD1A /* UIImage+Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F4F22AE8383E007ADD1A /* UIImage+Consts.swift */; };
 		EDA1F4F62AE83B0D007ADD1A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = EDA1F4F52AE83B0D007ADD1A /* SnapKit */; };
 		EDA1F4FB2AE83DE1007ADD1A /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F4FA2AE83DE1007ADD1A /* LoginVC.swift */; };
+		EDA1F4FE2AF15F5F007ADD1A /* View+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F4FD2AF15F5F007ADD1A /* View+Layer.swift */; };
+		EDA1F5012AF16033007ADD1A /* UIButton+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F5002AF16033007ADD1A /* UIButton+Styles.swift */; };
+		EDA1F5042AF16ED1007ADD1A /* LineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F5032AF16ED1007ADD1A /* LineTextField.swift */; };
+		EDA1F5062AFE9435007ADD1A /* UIButton+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F5052AFE9434007ADD1A /* UIButton+Actions.swift */; };
+		EDA1F5082AFE978D007ADD1A /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F5072AFE978D007ADD1A /* LoginVM.swift */; };
+		EDA1F50A2AFE97F5007ADD1A /* LoginAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F5092AFE97F5007ADD1A /* LoginAssembler.swift */; };
+		EDA1F50E2AFEA1BA007ADD1A /* InputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F50D2AFEA1BA007ADD1A /* InputValidator.swift */; };
+		EDA1F5112AFEA816007ADD1A /* InputValidator+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F5102AFEA816007ADD1A /* InputValidator+Login.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +37,14 @@
 		EDA1F4F02AE834EB007ADD1A /* UIFont+Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Consts.swift"; sourceTree = "<group>"; };
 		EDA1F4F22AE8383E007ADD1A /* UIImage+Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Consts.swift"; sourceTree = "<group>"; };
 		EDA1F4FA2AE83DE1007ADD1A /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		EDA1F4FD2AF15F5F007ADD1A /* View+Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Layer.swift"; sourceTree = "<group>"; };
+		EDA1F5002AF16033007ADD1A /* UIButton+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Styles.swift"; sourceTree = "<group>"; };
+		EDA1F5032AF16ED1007ADD1A /* LineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTextField.swift; sourceTree = "<group>"; };
+		EDA1F5052AFE9434007ADD1A /* UIButton+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Actions.swift"; sourceTree = "<group>"; };
+		EDA1F5072AFE978D007ADD1A /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
+		EDA1F5092AFE97F5007ADD1A /* LoginAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembler.swift; sourceTree = "<group>"; };
+		EDA1F50D2AFEA1BA007ADD1A /* InputValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputValidator.swift; sourceTree = "<group>"; };
+		EDA1F5102AFEA816007ADD1A /* InputValidator+Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputValidator+Login.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +78,14 @@
 		EDA1F4D62AE824ED007ADD1A /* NoteMe */ = {
 			isa = PBXGroup;
 			children = (
-				EDA1F4F72AE83D7B007ADD1A /* Modules */,
 				EDA1F4EB2AE82D0C007ADD1A /* App */,
-				EDA1F4EC2AE82DBA007ADD1A /* Resource */,
+				EDA1F5022AF16E9E007ADD1A /* Custom */,
 				EDA1F4E22AE824F0007ADD1A /* LaunchScreen.storyboard */,
+				EDA1F4F72AE83D7B007ADD1A /* Modules */,
+				EDA1F4EC2AE82DBA007ADD1A /* Resource */,
+				EDA1F50B2AFEA14F007ADD1A /* Services */,
+				EDA1F4FF2AF1600C007ADD1A /* Styles */,
+				EDA1F4FC2AF15EC2007ADD1A /* Utils */,
 			);
 			path = NoteMe;
 			sourceTree = "<group>";
@@ -74,8 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				EDA1F4D72AE824ED007ADD1A /* AppDelegate.swift */,
-				EDA1F4D92AE824ED007ADD1A /* SceneDelegate.swift */,
 				EDA1F4E52AE824F0007ADD1A /* Info.plist */,
+				EDA1F4D92AE824ED007ADD1A /* SceneDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -118,9 +138,61 @@
 		EDA1F4F92AE83DBF007ADD1A /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				EDA1F50F2AFEA7CA007ADD1A /* UseCases */,
 				EDA1F4FA2AE83DE1007ADD1A /* LoginVC.swift */,
+				EDA1F5072AFE978D007ADD1A /* LoginVM.swift */,
+				EDA1F5092AFE97F5007ADD1A /* LoginAssembler.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		EDA1F4FC2AF15EC2007ADD1A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EDA1F4FD2AF15F5F007ADD1A /* View+Layer.swift */,
+				EDA1F5052AFE9434007ADD1A /* UIButton+Actions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		EDA1F4FF2AF1600C007ADD1A /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				EDA1F5002AF16033007ADD1A /* UIButton+Styles.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		EDA1F5022AF16E9E007ADD1A /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				EDA1F5032AF16ED1007ADD1A /* LineTextField.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		EDA1F50B2AFEA14F007ADD1A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EDA1F50C2AFEA17E007ADD1A /* InputValidator */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EDA1F50C2AFEA17E007ADD1A /* InputValidator */ = {
+			isa = PBXGroup;
+			children = (
+				EDA1F50D2AFEA1BA007ADD1A /* InputValidator.swift */,
+			);
+			path = InputValidator;
+			sourceTree = "<group>";
+		};
+		EDA1F50F2AFEA7CA007ADD1A /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				EDA1F5102AFEA816007ADD1A /* InputValidator+Login.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,9 +272,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDA1F4F32AE8383E007ADD1A /* UIImage+Consts.swift in Sources */,
+				EDA1F5112AFEA816007ADD1A /* InputValidator+Login.swift in Sources */,
+				EDA1F5082AFE978D007ADD1A /* LoginVM.swift in Sources */,
+				EDA1F50A2AFE97F5007ADD1A /* LoginAssembler.swift in Sources */,
+				EDA1F5042AF16ED1007ADD1A /* LineTextField.swift in Sources */,
+				EDA1F5012AF16033007ADD1A /* UIButton+Styles.swift in Sources */,
+				EDA1F50E2AFEA1BA007ADD1A /* InputValidator.swift in Sources */,
+				EDA1F4FE2AF15F5F007ADD1A /* View+Layer.swift in Sources */,
 				EDA1F4F12AE834EB007ADD1A /* UIFont+Consts.swift in Sources */,
 				EDA1F4FB2AE83DE1007ADD1A /* LoginVC.swift in Sources */,
 				EDA1F4D82AE824ED007ADD1A /* AppDelegate.swift in Sources */,
+				EDA1F5062AFE9435007ADD1A /* UIButton+Actions.swift in Sources */,
 				EDA1F4EF2AE82E7E007ADD1A /* UIColor+Consts.swift in Sources */,
 				EDA1F4DA2AE824ED007ADD1A /* SceneDelegate.swift in Sources */,
 			);
@@ -339,7 +419,7 @@
 		EDA1F4E92AE824F0007ADD1A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = logo;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -370,7 +450,7 @@
 		EDA1F4EA2AE824F0007ADD1A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = logo;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
