@@ -41,12 +41,9 @@ final class LoginVC: UIViewController {
         .underlineGrayButton("fogot_password".localized)
         .withAction(self, #selector(forgotPasswordDidTap))
     
-    private lazy var infoView: UIView = {
-       let view = UIView()
-        view.cornerRadius = 5.0
-        view.backgroundColor = .white
-        return view
-    }()
+    private lazy var infoView: UIView =
+        .whiteRoundedViewWithShadow()
+    
     
     private lazy var emailTextField: LineTextField = {
         let textField = LineTextField()
@@ -148,6 +145,11 @@ final class LoginVC: UIViewController {
         
         emailTextField.snp.makeConstraints { make in
             make.horizontalEdges.top.equalToSuperview().inset(16.0)
+            make.bottom.equalTo(passwordTextField.snp.top).inset(-16.0)
+        }
+        
+        passwordTextField.snp.makeConstraints { make in
+            make.horizontalEdges.equalToSuperview().inset(16.0)
             make.bottom.equalTo(fogotPasswordButton.snp.top).inset(-20.0)
         }
         

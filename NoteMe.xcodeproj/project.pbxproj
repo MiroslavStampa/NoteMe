@@ -30,6 +30,7 @@
 		EDA1F51B2B03E54A007ADD1A /* KeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F51A2B03E54A007ADD1A /* KeyboardHelper.swift */; };
 		EDA1F5212B0A3731007ADD1A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EDA1F5232B0A3731007ADD1A /* Localizable.strings */; };
 		EDA1F5282B0A3A4E007ADD1A /* String+Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F5272B0A3A4E007ADD1A /* String+Localize.swift */; };
+		EDA1F52A2B0A4016007ADD1A /* UIView+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F5292B0A4016007ADD1A /* UIView+Styles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		EDA1F5252B0A373C007ADD1A /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EDA1F5262B0A373D007ADD1A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EDA1F5272B0A3A4E007ADD1A /* String+Localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localize.swift"; sourceTree = "<group>"; };
+		EDA1F5292B0A4016007ADD1A /* UIView+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Styles.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				EDA1F5002AF16033007ADD1A /* UIButton+Styles.swift */,
+				EDA1F5292B0A4016007ADD1A /* UIView+Styles.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 			files = (
 				EDA1F5182B03E122007ADD1A /* RegisterAssembler.swift in Sources */,
 				EDA1F4F32AE8383E007ADD1A /* UIImage+Consts.swift in Sources */,
+				EDA1F52A2B0A4016007ADD1A /* UIView+Styles.swift in Sources */,
 				EDA1F5112AFEA816007ADD1A /* InputValidator+Login.swift in Sources */,
 				EDA1F5082AFE978D007ADD1A /* LoginVM.swift in Sources */,
 				EDA1F50A2AFE97F5007ADD1A /* LoginAssembler.swift in Sources */,
