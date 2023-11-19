@@ -30,7 +30,7 @@ extension UIButton {
         button.setBorder(width: 1.0, color: .appYellow)
         button.cornerRadius = 5.0
         
-        button.setTitle("Cancel", for: .normal)
+        button.setTitle("cancel".localized, for: .normal)
         
         button.setTitleColor(.appYellow, for: .normal)
         button.setTitleColor(.appText.withAlphaComponent(0.75), for: .highlighted)

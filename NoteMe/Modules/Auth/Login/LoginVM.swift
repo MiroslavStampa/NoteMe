@@ -35,14 +35,10 @@ final class LoginVM: LoginViewModelProtocol{
     
     func loginDidTap(email: String?, password: String?) {
         
-        guard inputValidator.validate(email: email) else {
-            catchEmailError?("Wrong e-mail")
-            return }
-        guard inputValidator.validate(password: password) else {
-            catchPasswordError?("Non-valid password")
-            return}
-        
-        guard let email, let password else {return}
+        guard
+            checkValidation(email: email, password: password),
+            let email, let password
+        else {return}
         authService.login(email: email, password: password) { isSuccess in
             print(isSuccess)
         }
@@ -57,5 +53,12 @@ final class LoginVM: LoginViewModelProtocol{
         
     }
     
-    
+    private func checkValidation(email: String?, password: String?) -> Bool {
+        let isEmailValid = inputValidator.validate(email: email)
+        let isPasswordValid = inputValidator.validate(password: password)
+        
+        //catchEmailError?(isEmailValid ? nil : "wrong_e_mail".localized )
+        //catchPasswordError?(isPasswordValid ? nil : "non_valid_password".localized)
+            return isEmailValid && isPasswordValid
+    }
 }

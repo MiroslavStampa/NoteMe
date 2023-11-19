@@ -24,6 +24,12 @@
 		EDA1F50A2AFE97F5007ADD1A /* LoginAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F5092AFE97F5007ADD1A /* LoginAssembler.swift */; };
 		EDA1F50E2AFEA1BA007ADD1A /* InputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F50D2AFEA1BA007ADD1A /* InputValidator.swift */; };
 		EDA1F5112AFEA816007ADD1A /* InputValidator+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F5102AFEA816007ADD1A /* InputValidator+Login.swift */; };
+		EDA1F5142B03D5B3007ADD1A /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F5132B03D5B3007ADD1A /* RegisterVC.swift */; };
+		EDA1F5162B03DB8E007ADD1A /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F5152B03DB8E007ADD1A /* RegisterPresenter.swift */; };
+		EDA1F5182B03E122007ADD1A /* RegisterAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F5172B03E122007ADD1A /* RegisterAssembler.swift */; };
+		EDA1F51B2B03E54A007ADD1A /* KeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F51A2B03E54A007ADD1A /* KeyboardHelper.swift */; };
+		EDA1F5212B0A3731007ADD1A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EDA1F5232B0A3731007ADD1A /* Localizable.strings */; };
+		EDA1F5282B0A3A4E007ADD1A /* String+Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F5272B0A3A4E007ADD1A /* String+Localize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +51,18 @@
 		EDA1F5092AFE97F5007ADD1A /* LoginAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembler.swift; sourceTree = "<group>"; };
 		EDA1F50D2AFEA1BA007ADD1A /* InputValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputValidator.swift; sourceTree = "<group>"; };
 		EDA1F5102AFEA816007ADD1A /* InputValidator+Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputValidator+Login.swift"; sourceTree = "<group>"; };
+		EDA1F5132B03D5B3007ADD1A /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		EDA1F5152B03DB8E007ADD1A /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		EDA1F5172B03E122007ADD1A /* RegisterAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAssembler.swift; sourceTree = "<group>"; };
+		EDA1F51A2B03E54A007ADD1A /* KeyboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHelper.swift; sourceTree = "<group>"; };
+		EDA1F51E2B0A36B7007ADD1A /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		EDA1F51F2B0A36C3007ADD1A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		EDA1F5202B0A36EE007ADD1A /* be-BY */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "be-BY"; path = "be-BY.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		EDA1F5222B0A3731007ADD1A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EDA1F5242B0A3737007ADD1A /* be-BY */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "be-BY"; path = "be-BY.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		EDA1F5252B0A373C007ADD1A /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EDA1F5262B0A373D007ADD1A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EDA1F5272B0A3A4E007ADD1A /* String+Localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localize.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +123,7 @@
 			children = (
 				EDA1F4ED2AE82E3B007ADD1A /* Consts */,
 				EDA1F4E02AE824F0007ADD1A /* Assets.xcassets */,
+				EDA1F5232B0A3731007ADD1A /* Localizable.strings */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -130,6 +149,7 @@
 		EDA1F4F82AE83DA3007ADD1A /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				EDA1F5122B03D595007ADD1A /* Register */,
 				EDA1F4F92AE83DBF007ADD1A /* Login */,
 			);
 			path = Auth;
@@ -151,6 +171,7 @@
 			children = (
 				EDA1F4FD2AF15F5F007ADD1A /* View+Layer.swift */,
 				EDA1F5052AFE9434007ADD1A /* UIButton+Actions.swift */,
+				EDA1F5272B0A3A4E007ADD1A /* String+Localize.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -174,6 +195,7 @@
 		EDA1F50B2AFEA14F007ADD1A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				EDA1F5192B03E515007ADD1A /* KeyboardHelper */,
 				EDA1F50C2AFEA17E007ADD1A /* InputValidator */,
 			);
 			path = Services;
@@ -193,6 +215,24 @@
 				EDA1F5102AFEA816007ADD1A /* InputValidator+Login.swift */,
 			);
 			path = UseCases;
+			sourceTree = "<group>";
+		};
+		EDA1F5122B03D595007ADD1A /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				EDA1F5132B03D5B3007ADD1A /* RegisterVC.swift */,
+				EDA1F5152B03DB8E007ADD1A /* RegisterPresenter.swift */,
+				EDA1F5172B03E122007ADD1A /* RegisterAssembler.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		EDA1F5192B03E515007ADD1A /* KeyboardHelper */ = {
+			isa = PBXGroup;
+			children = (
+				EDA1F51A2B03E54A007ADD1A /* KeyboardHelper.swift */,
+			);
+			path = KeyboardHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +280,9 @@
 			knownRegions = (
 				en,
 				Base,
+				pl,
+				ru,
+				"be-BY",
 			);
 			mainGroup = EDA1F4CB2AE824EC007ADD1A;
 			packageReferences = (
@@ -260,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDA1F4E42AE824F0007ADD1A /* LaunchScreen.storyboard in Resources */,
+				EDA1F5212B0A3731007ADD1A /* Localizable.strings in Resources */,
 				EDA1F4E12AE824F0007ADD1A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,20 +315,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDA1F5182B03E122007ADD1A /* RegisterAssembler.swift in Sources */,
 				EDA1F4F32AE8383E007ADD1A /* UIImage+Consts.swift in Sources */,
 				EDA1F5112AFEA816007ADD1A /* InputValidator+Login.swift in Sources */,
 				EDA1F5082AFE978D007ADD1A /* LoginVM.swift in Sources */,
 				EDA1F50A2AFE97F5007ADD1A /* LoginAssembler.swift in Sources */,
 				EDA1F5042AF16ED1007ADD1A /* LineTextField.swift in Sources */,
+				EDA1F5282B0A3A4E007ADD1A /* String+Localize.swift in Sources */,
+				EDA1F51B2B03E54A007ADD1A /* KeyboardHelper.swift in Sources */,
 				EDA1F5012AF16033007ADD1A /* UIButton+Styles.swift in Sources */,
 				EDA1F50E2AFEA1BA007ADD1A /* InputValidator.swift in Sources */,
 				EDA1F4FE2AF15F5F007ADD1A /* View+Layer.swift in Sources */,
 				EDA1F4F12AE834EB007ADD1A /* UIFont+Consts.swift in Sources */,
+				EDA1F5142B03D5B3007ADD1A /* RegisterVC.swift in Sources */,
 				EDA1F4FB2AE83DE1007ADD1A /* LoginVC.swift in Sources */,
 				EDA1F4D82AE824ED007ADD1A /* AppDelegate.swift in Sources */,
 				EDA1F5062AFE9435007ADD1A /* UIButton+Actions.swift in Sources */,
 				EDA1F4EF2AE82E7E007ADD1A /* UIColor+Consts.swift in Sources */,
 				EDA1F4DA2AE824ED007ADD1A /* SceneDelegate.swift in Sources */,
+				EDA1F5162B03DB8E007ADD1A /* RegisterPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,8 +344,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				EDA1F4E32AE824F0007ADD1A /* Base */,
+				EDA1F51E2B0A36B7007ADD1A /* pl */,
+				EDA1F51F2B0A36C3007ADD1A /* ru */,
+				EDA1F5202B0A36EE007ADD1A /* be-BY */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EDA1F5232B0A3731007ADD1A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDA1F5222B0A3731007ADD1A /* en */,
+				EDA1F5242B0A3737007ADD1A /* be-BY */,
+				EDA1F5252B0A373C007ADD1A /* pl */,
+				EDA1F5262B0A373D007ADD1A /* ru */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -306,6 +369,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -366,6 +430,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

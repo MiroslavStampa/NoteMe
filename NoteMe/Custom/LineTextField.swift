@@ -14,6 +14,7 @@ final class LineTextField: UIView {
        let label = UILabel()
         label.font = .appBoldFont.withSize(13.0)
         label.textColor = .appText
+        label.textAlignment = .left
         return label
     }()
     
@@ -22,6 +23,7 @@ final class LineTextField: UIView {
         textField.borderStyle = .none
         textField.font = .appFont.withSize(15.0)
         textField.textColor = .appText
+        textField.textAlignment = .left
         return textField
     }()
     private lazy var separator: UIView = {
@@ -58,16 +60,24 @@ final class LineTextField: UIView {
     }
     init(){
         super.init(frame: .zero)
+        commonInit()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         commonInit()
     }
+    
     private func commonInit(){
-        
+        setupUI()
+        setupConstraints()
     }
+    
     private func setupUI(){
+        addSubview(titleLabel)
+        addSubview(textField)
+        addSubview(separator)
+        addSubview(errorLabel)
         
     }
     private func setupConstraints(){
@@ -75,17 +85,17 @@ final class LineTextField: UIView {
             make.horizontalEdges.top.equalToSuperview()
         }
         textField.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).inset(4.0)
+            make.top.equalTo(titleLabel.snp.bottom).inset(-4.0)
             make.horizontalEdges.equalToSuperview()
         }
         separator.snp.makeConstraints { make in
-            make.top.equalTo(textField.snp.bottom).inset(4.0)
+            make.top.equalTo(textField.snp.bottom).inset(-4.0)
             make.horizontalEdges.equalToSuperview()
             make.height.equalTo(1.0)
         }
         errorLabel.snp.makeConstraints { make in
             make.bottom.horizontalEdges.equalToSuperview()
-            make.top.equalTo(separator.snp.bottom).inset(4.0)
+            make.top.equalTo(separator.snp.bottom).inset(-4.0)
         }
     }
 }
