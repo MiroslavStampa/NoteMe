@@ -9,7 +9,7 @@ import UIKit
 
 extension UIView {
     
-    static func whiteRoundedViewWithShadow() -> UIView{
+    static func infoView() -> UIView{
         let view = UIView()
         
         view.cornerRadius = 5.0
@@ -21,8 +21,11 @@ extension UIView {
         view.layer.shadowRadius = 4
         
         return view
-            
-        
+    }
+    static func contentView() -> UIView{
+        let view = UIView()
+        view.backgroundColor = .appGray
+        return view
     }
     
 }

@@ -8,7 +8,8 @@
 import UIKit
 
 @objc protocol OnboardSecondStepViewModelProtocol {
-    func onDidTap()
+    @objc func doneDidTap()
+    func dismissedByUser()
 }
 
 final class OnboardSecondStepVC: UIViewController {
@@ -17,7 +18,8 @@ final class OnboardSecondStepVC: UIViewController {
     
     private lazy var doneButton: UIButton =
         .yellowRoudedButton("done".localized)
-        .withAction(viewModel, #selector(OnboardSecondStepViewModelProtocol.onDidTap))
+        .withAction(viewModel,
+                    #selector(OnboardSecondStepViewModelProtocol.doneDidTap))
     
     init(viewModel: OnboardSecondStepViewModelProtocol) {
         self.viewModel = viewModel
@@ -27,11 +29,18 @@ final class OnboardSecondStepVC: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
         setupConstraints()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        viewModel.dismissedByUser()
     }
     
     private func setupUI(){

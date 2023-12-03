@@ -31,6 +31,20 @@
 		EDA1F5212B0A3731007ADD1A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EDA1F5232B0A3731007ADD1A /* Localizable.strings */; };
 		EDA1F5282B0A3A4E007ADD1A /* String+Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F5272B0A3A4E007ADD1A /* String+Localize.swift */; };
 		EDA1F52A2B0A4016007ADD1A /* UIView+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F5292B0A4016007ADD1A /* UIView+Styles.swift */; };
+		EDA1F52D2B0A78C9007ADD1A /* Label+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F52C2B0A78C9007ADD1A /* Label+Style.swift */; };
+		EDA1F5302B0D1248007ADD1A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F52F2B0D1248007ADD1A /* AppCoordinator.swift */; };
+		EDA1F5332B0D12A7007ADD1A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F5322B0D12A7007ADD1A /* Coordinator.swift */; };
+		EDA1F5362B0D1B75007ADD1A /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F5352B0D1B75007ADD1A /* LoginCoordinator.swift */; };
+		EDA1F5392B0D24D4007ADD1A /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F5382B0D24D4007ADD1A /* RegisterCoordinator.swift */; };
+		EDA1F53C2B164B8E007ADD1A /* ParametersHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F53B2B164B8E007ADD1A /* ParametersHelper.swift */; };
+		EDA1F5412B165489007ADD1A /* OnboardFirstStepVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F5402B165489007ADD1A /* OnboardFirstStepVC.swift */; };
+		EDA1F5432B165680007ADD1A /* OnboardFirstStepVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F5422B165680007ADD1A /* OnboardFirstStepVM.swift */; };
+		EDA1F5462B165739007ADD1A /* OnboardFirstStepAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F5452B165739007ADD1A /* OnboardFirstStepAssembler.swift */; };
+		EDA1F5482B1657EA007ADD1A /* OnboardFirstStepCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F5472B1657EA007ADD1A /* OnboardFirstStepCoordinator.swift */; };
+		EDA1F54C2B165AF2007ADD1A /* OnboardSecondStepVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F54B2B165AF2007ADD1A /* OnboardSecondStepVC.swift */; };
+		EDA1F54E2B165D9B007ADD1A /* OnboardSecondStepVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F54D2B165D9B007ADD1A /* OnboardSecondStepVM.swift */; };
+		EDA9C2BA2B1CEB0A00655764 /* OnboardSecondStepCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9C2B92B1CEB0A00655764 /* OnboardSecondStepCoordinator.swift */; };
+		EDA9C2BC2B1CFAA000655764 /* OnboardSecondStepAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9C2BB2B1CFAA000655764 /* OnboardSecondStepAssembler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +79,20 @@
 		EDA1F5262B0A373D007ADD1A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EDA1F5272B0A3A4E007ADD1A /* String+Localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localize.swift"; sourceTree = "<group>"; };
 		EDA1F5292B0A4016007ADD1A /* UIView+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Styles.swift"; sourceTree = "<group>"; };
+		EDA1F52C2B0A78C9007ADD1A /* Label+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Label+Style.swift"; sourceTree = "<group>"; };
+		EDA1F52F2B0D1248007ADD1A /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		EDA1F5322B0D12A7007ADD1A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		EDA1F5352B0D1B75007ADD1A /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		EDA1F5382B0D24D4007ADD1A /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
+		EDA1F53B2B164B8E007ADD1A /* ParametersHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersHelper.swift; sourceTree = "<group>"; };
+		EDA1F5402B165489007ADD1A /* OnboardFirstStepVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardFirstStepVC.swift; sourceTree = "<group>"; };
+		EDA1F5422B165680007ADD1A /* OnboardFirstStepVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardFirstStepVM.swift; sourceTree = "<group>"; };
+		EDA1F5452B165739007ADD1A /* OnboardFirstStepAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardFirstStepAssembler.swift; sourceTree = "<group>"; };
+		EDA1F5472B1657EA007ADD1A /* OnboardFirstStepCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardFirstStepCoordinator.swift; sourceTree = "<group>"; };
+		EDA1F54B2B165AF2007ADD1A /* OnboardSecondStepVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardSecondStepVC.swift; sourceTree = "<group>"; };
+		EDA1F54D2B165D9B007ADD1A /* OnboardSecondStepVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardSecondStepVM.swift; sourceTree = "<group>"; };
+		EDA9C2B92B1CEB0A00655764 /* OnboardSecondStepCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardSecondStepCoordinator.swift; sourceTree = "<group>"; };
+		EDA9C2BB2B1CFAA000655764 /* OnboardSecondStepAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardSecondStepAssembler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +144,7 @@
 				EDA1F4D72AE824ED007ADD1A /* AppDelegate.swift */,
 				EDA1F4E52AE824F0007ADD1A /* Info.plist */,
 				EDA1F4D92AE824ED007ADD1A /* SceneDelegate.swift */,
+				EDA1F52F2B0D1248007ADD1A /* AppCoordinator.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -143,6 +172,7 @@
 		EDA1F4F72AE83D7B007ADD1A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EDA1F53D2B165435007ADD1A /* Onboarding */,
 				EDA1F4F82AE83DA3007ADD1A /* Auth */,
 			);
 			path = Modules;
@@ -151,6 +181,7 @@
 		EDA1F4F82AE83DA3007ADD1A /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				EDA1F52B2B0A4900007ADD1A /* Reset */,
 				EDA1F5122B03D595007ADD1A /* Register */,
 				EDA1F4F92AE83DBF007ADD1A /* Login */,
 			);
@@ -160,10 +191,10 @@
 		EDA1F4F92AE83DBF007ADD1A /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				EDA1F5342B0D1B56007ADD1A /* Coordinator */,
 				EDA1F50F2AFEA7CA007ADD1A /* UseCases */,
 				EDA1F4FA2AE83DE1007ADD1A /* LoginVC.swift */,
 				EDA1F5072AFE978D007ADD1A /* LoginVM.swift */,
-				EDA1F5092AFE97F5007ADD1A /* LoginAssembler.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -183,6 +214,7 @@
 			children = (
 				EDA1F5002AF16033007ADD1A /* UIButton+Styles.swift */,
 				EDA1F5292B0A4016007ADD1A /* UIView+Styles.swift */,
+				EDA1F52C2B0A78C9007ADD1A /* Label+Style.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -198,6 +230,8 @@
 		EDA1F50B2AFEA14F007ADD1A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				EDA1F53A2B164B65007ADD1A /* ParametersHelper */,
+				EDA1F5312B0D1292007ADD1A /* Coordinator */,
 				EDA1F5192B03E515007ADD1A /* KeyboardHelper */,
 				EDA1F50C2AFEA17E007ADD1A /* InputValidator */,
 			);
@@ -223,9 +257,10 @@
 		EDA1F5122B03D595007ADD1A /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				EDA1F5372B0D24B5007ADD1A /* Coordinator */,
+				EDA1F52E2B0D0D9E007ADD1A /* UseCases */,
 				EDA1F5132B03D5B3007ADD1A /* RegisterVC.swift */,
 				EDA1F5152B03DB8E007ADD1A /* RegisterPresenter.swift */,
-				EDA1F5172B03E122007ADD1A /* RegisterAssembler.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -236,6 +271,101 @@
 				EDA1F51A2B03E54A007ADD1A /* KeyboardHelper.swift */,
 			);
 			path = KeyboardHelper;
+			sourceTree = "<group>";
+		};
+		EDA1F52B2B0A4900007ADD1A /* Reset */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Reset;
+			sourceTree = "<group>";
+		};
+		EDA1F52E2B0D0D9E007ADD1A /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		EDA1F5312B0D1292007ADD1A /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				EDA1F5322B0D12A7007ADD1A /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		EDA1F5342B0D1B56007ADD1A /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				EDA1F5352B0D1B75007ADD1A /* LoginCoordinator.swift */,
+				EDA1F5092AFE97F5007ADD1A /* LoginAssembler.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		EDA1F5372B0D24B5007ADD1A /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				EDA1F5382B0D24D4007ADD1A /* RegisterCoordinator.swift */,
+				EDA1F5172B03E122007ADD1A /* RegisterAssembler.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		EDA1F53A2B164B65007ADD1A /* ParametersHelper */ = {
+			isa = PBXGroup;
+			children = (
+				EDA1F53B2B164B8E007ADD1A /* ParametersHelper.swift */,
+			);
+			path = ParametersHelper;
+			sourceTree = "<group>";
+		};
+		EDA1F53D2B165435007ADD1A /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				EDA1F5492B165AAC007ADD1A /* OnboardingSecondStep */,
+				EDA1F53E2B165446007ADD1A /* OnboardingFirstStep */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		EDA1F53E2B165446007ADD1A /* OnboardingFirstStep */ = {
+			isa = PBXGroup;
+			children = (
+				EDA1F53F2B16545B007ADD1A /* Coordinator */,
+				EDA1F5402B165489007ADD1A /* OnboardFirstStepVC.swift */,
+				EDA1F5422B165680007ADD1A /* OnboardFirstStepVM.swift */,
+			);
+			path = OnboardingFirstStep;
+			sourceTree = "<group>";
+		};
+		EDA1F53F2B16545B007ADD1A /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				EDA1F5452B165739007ADD1A /* OnboardFirstStepAssembler.swift */,
+				EDA1F5472B1657EA007ADD1A /* OnboardFirstStepCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		EDA1F5492B165AAC007ADD1A /* OnboardingSecondStep */ = {
+			isa = PBXGroup;
+			children = (
+				EDA1F54A2B165ACC007ADD1A /* Coordinator */,
+				EDA1F54D2B165D9B007ADD1A /* OnboardSecondStepVM.swift */,
+				EDA1F54B2B165AF2007ADD1A /* OnboardSecondStepVC.swift */,
+			);
+			path = OnboardingSecondStep;
+			sourceTree = "<group>";
+		};
+		EDA1F54A2B165ACC007ADD1A /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				EDA9C2B92B1CEB0A00655764 /* OnboardSecondStepCoordinator.swift */,
+				EDA9C2BB2B1CFAA000655764 /* OnboardSecondStepAssembler.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,7 +399,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					EDA1F4D32AE824ED007ADD1A = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -318,26 +448,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDA9C2BA2B1CEB0A00655764 /* OnboardSecondStepCoordinator.swift in Sources */,
+				EDA1F5302B0D1248007ADD1A /* AppCoordinator.swift in Sources */,
 				EDA1F5182B03E122007ADD1A /* RegisterAssembler.swift in Sources */,
 				EDA1F4F32AE8383E007ADD1A /* UIImage+Consts.swift in Sources */,
+				EDA1F5482B1657EA007ADD1A /* OnboardFirstStepCoordinator.swift in Sources */,
 				EDA1F52A2B0A4016007ADD1A /* UIView+Styles.swift in Sources */,
 				EDA1F5112AFEA816007ADD1A /* InputValidator+Login.swift in Sources */,
 				EDA1F5082AFE978D007ADD1A /* LoginVM.swift in Sources */,
+				EDA1F5362B0D1B75007ADD1A /* LoginCoordinator.swift in Sources */,
 				EDA1F50A2AFE97F5007ADD1A /* LoginAssembler.swift in Sources */,
 				EDA1F5042AF16ED1007ADD1A /* LineTextField.swift in Sources */,
 				EDA1F5282B0A3A4E007ADD1A /* String+Localize.swift in Sources */,
 				EDA1F51B2B03E54A007ADD1A /* KeyboardHelper.swift in Sources */,
 				EDA1F5012AF16033007ADD1A /* UIButton+Styles.swift in Sources */,
 				EDA1F50E2AFEA1BA007ADD1A /* InputValidator.swift in Sources */,
+				EDA1F53C2B164B8E007ADD1A /* ParametersHelper.swift in Sources */,
+				EDA1F52D2B0A78C9007ADD1A /* Label+Style.swift in Sources */,
 				EDA1F4FE2AF15F5F007ADD1A /* View+Layer.swift in Sources */,
 				EDA1F4F12AE834EB007ADD1A /* UIFont+Consts.swift in Sources */,
+				EDA1F5462B165739007ADD1A /* OnboardFirstStepAssembler.swift in Sources */,
 				EDA1F5142B03D5B3007ADD1A /* RegisterVC.swift in Sources */,
+				EDA1F54E2B165D9B007ADD1A /* OnboardSecondStepVM.swift in Sources */,
 				EDA1F4FB2AE83DE1007ADD1A /* LoginVC.swift in Sources */,
+				EDA1F5412B165489007ADD1A /* OnboardFirstStepVC.swift in Sources */,
+				EDA1F5332B0D12A7007ADD1A /* Coordinator.swift in Sources */,
+				EDA1F5392B0D24D4007ADD1A /* RegisterCoordinator.swift in Sources */,
 				EDA1F4D82AE824ED007ADD1A /* AppDelegate.swift in Sources */,
+				EDA1F5432B165680007ADD1A /* OnboardFirstStepVM.swift in Sources */,
 				EDA1F5062AFE9435007ADD1A /* UIButton+Actions.swift in Sources */,
 				EDA1F4EF2AE82E7E007ADD1A /* UIColor+Consts.swift in Sources */,
 				EDA1F4DA2AE824ED007ADD1A /* SceneDelegate.swift in Sources */,
 				EDA1F5162B03DB8E007ADD1A /* RegisterPresenter.swift in Sources */,
+				EDA9C2BC2B1CFAA000655764 /* OnboardSecondStepAssembler.swift in Sources */,
+				EDA1F54C2B165AF2007ADD1A /* OnboardSecondStepVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +517,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -406,6 +551,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -434,6 +580,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -467,6 +614,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

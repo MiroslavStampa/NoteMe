@@ -7,6 +7,12 @@
 
 import UIKit
 
+protocol LoginCoordinatorProtocol: AnyObject {
+    func finish()
+    func openRegisterModule()
+    func openResetModule()
+}
+
 protocol LoginInputValidatorUseCase {
     func validate(email: String?) -> Bool
     func validate(password: String?) -> Bool
@@ -19,16 +25,20 @@ protocol LoginAuthServiceUseCase {
 }
 
 final class LoginVM: LoginViewModelProtocol{
-    var catchEmailError: ((String) -> Void)?
+    var catchEmailError: ((String?) -> Void)?
     
-    var catchPasswordError: ((String) -> Void)?
+    var catchPasswordError: ((String?) -> Void)?
+    
+    private weak var coordinator: LoginCoordinatorProtocol?
     
     
     private let authService: LoginAuthServiceUseCase
     private let inputValidator: LoginInputValidatorUseCase
     
-    init(authService: LoginAuthServiceUseCase,
+    init(coordinator: LoginCoordinatorProtocol,
+         authService: LoginAuthServiceUseCase,
          inputValidator:LoginInputValidatorUseCase) {
+        self.coordinator = coordinator
         self.authService = authService
         self.inputValidator = inputValidator
     }
@@ -39,26 +49,32 @@ final class LoginVM: LoginViewModelProtocol{
             checkValidation(email: email, password: password),
             let email, let password
         else {return}
-        authService.login(email: email, password: password) { isSuccess in
-            print(isSuccess)
+        authService.login(email: email, password: password) { [weak coordinator] isSuccess in
+            print(isSuccess,#function,Self.self)
+            if isSuccess {
+                ParametersHelper.set(.authenticated, value: true)
+                coordinator?.finish()
+            }
         }
         
     }
     
     func newAccountDidTap() {
-        
+        print(#function,Self.self)
+        coordinator?.openRegisterModule()
     }
     
     func forgotPasswordDidTap(email: String?) {
-        
+        print(Self.self, #function)
+        coordinator?.openResetModule()
     }
     
     private func checkValidation(email: String?, password: String?) -> Bool {
         let isEmailValid = inputValidator.validate(email: email)
         let isPasswordValid = inputValidator.validate(password: password)
         
-        //catchEmailError?(isEmailValid ? nil : "wrong_e_mail".localized )
-        //catchPasswordError?(isPasswordValid ? nil : "non_valid_password".localized)
+        catchEmailError?(isEmailValid ? nil : "wrong_e_mail".localized )
+        catchPasswordError?(isPasswordValid ? nil : "non_valid_password".localized)
             return isEmailValid && isPasswordValid
     }
 }

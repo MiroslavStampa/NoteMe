@@ -5,3 +5,18 @@
   Created by Miroslav Martynovich on 19.11.23.
   
 */
+///add location in naming of words in the project
+///better do not reuse string in different places
+
+"login" = "Login";
+"welcome_back" = "Welcome back!";
+"new_account" = "New Account";
+"fogot_password" = "Fogot Password";
+"e_mail" = "E-mail";
+"enter_e_mail" = "Enter E-mail";
+"password" = "Password";
+"enter_password" = "Enter Password";
+"wrong_e_mail" = "Wrong e-mail";
+"non_valid_password" = "Non-valid password";
+"cancel" = "Cancel";
+"nice_to_meet_you" = "Nice to meet you!";

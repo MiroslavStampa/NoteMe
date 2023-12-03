@@ -9,12 +9,12 @@ import UIKit
 
 final class KeyboardHelper {
     
-    typealias KeyboardHeightHandler = (CGFloat) -> Void
+    typealias KeyboardFrameHandler = (CGRect) -> Void
     
-    private var willShow: KeyboardHeightHandler?
-    private var didShow: KeyboardHeightHandler?
-    private var willHide: KeyboardHeightHandler?
-    private var didHide: KeyboardHeightHandler?
+    private var willShow: KeyboardFrameHandler?
+    private var didShow: KeyboardFrameHandler?
+    private var willHide: KeyboardFrameHandler?
+    private var didHide: KeyboardFrameHandler?
     
     init() {
         addObservers()
@@ -25,23 +25,26 @@ final class KeyboardHelper {
     }
     
     private func addObservers() {
-        //       let center = NotificationCenter.default
-        //        center.addObserver(self,
-        //                           selector: #selector,
-        //                           name: UIResponder.keyboardWillShowNotification,
-        //                           object: nil)
-        //    }center.addObserver(self,
-        //                           selector: <#T##Selector#>,
-        //                           name: UIResponder.keyboardWillHideNotification,
-        //                           object: nil)
-        //    }center.addObserver(self,
-        //                           selector: <#T##Selector#>,
-        //                           name: UIResponder.keyboardWillShowNotification,
-        //                           object: nil)
-        //    }center.addObserver(self,
-        //                           selector: <#T##Selector#>,
-        //                           name: UIResponder.keyboardWillShowNotification,
-        //                           object: nil)
+        let center = NotificationCenter.default
+        center.addObserver(self,
+                           selector: #selector(keyboardWillShow),
+                           name: UIResponder.keyboardWillShowNotification,
+                           object: nil)
+            
+        center.addObserver(self,
+                           selector:#selector(keyboardDidShow),
+                           name: UIResponder.keyboardDidShowNotification,
+                           object: nil)
+            
+        center.addObserver(self,
+                           selector: #selector(keyboardWillHide),
+                           name: UIResponder.keyboardWillHideNotification,
+                           object: nil)
+            
+        center.addObserver(self,
+                           selector: #selector(keyboardDidHide),
+                           name: UIResponder.keyboardDidHideNotification,
+                           object: nil)
     }
     
     private func removeObservers() {
@@ -49,49 +52,60 @@ final class KeyboardHelper {
         center.removeObserver(self,
                               name: UIResponder.keyboardWillShowNotification,
                               object: nil)
+        center.removeObserver(self,
+                              name: UIResponder.keyboardDidShowNotification,
+                              object: nil)
+        center.removeObserver(self,
+                              name: UIResponder.keyboardWillHideNotification,
+                              object: nil)
+        center.removeObserver(self,
+                              name: UIResponder.keyboardDidHideNotification,
+                              object: nil)
     }
-    private func height(from notification: Notification) -> CGFloat {
+    private func frame(from notification: Notification) -> CGRect {
         guard
             let userInfo = notification.userInfo,
             let frame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect
         else {return .zero}
         
-        return frame.height
+        print(frame)
+        
+        return frame
     }
     
-    private func keyboardWillShow(_ notification: Notification){
-        willShow?(height(from: notification))
+    @objc private func keyboardWillShow(_ notification: Notification){
+        willShow?(frame(from: notification))
     }
-    private func keyboardDidShow(_ notification: Notification){
-        willShow?(height(from: notification))
+    @objc private func keyboardDidShow(_ notification: Notification){
+        didShow?(frame(from: notification))
     }
-    private func keyboardWillHide(_ notification: Notification){
-        willShow?(height(from: notification))
+    @objc private func keyboardWillHide(_ notification: Notification){
+        willHide?(frame(from: notification))
     }
-    private func keyboardDidHide(_ notification: Notification){
-        willShow?(height(from: notification))
+    @objc private func keyboardDidHide(_ notification: Notification){
+        didHide?(frame(from: notification))
     }
     @discardableResult
-    func onWillShow(_ handler: KeyboardHeightHandler) -> Self {
-        //willShow = handler
+    func onWillShow(_ handler: @escaping KeyboardFrameHandler) -> Self {
+        willShow = handler
         return self
     }
     
     @discardableResult
-    func onDidShow(_ handler: KeyboardHeightHandler) -> Self {
-        //willShow = handler
+    func onDidShow(_ handler: @escaping KeyboardFrameHandler) -> Self {
+        didShow = handler
         return self
     }
     
     @discardableResult
-    func onWillHide(_ handler: KeyboardHeightHandler) -> Self {
-        //willShow = handler
+    func onWillHide(_ handler: @escaping KeyboardFrameHandler) -> Self {
+        willHide = handler
         return self
     }
     
     @discardableResult
-    func onDidHide(_ handler: KeyboardHeightHandler) -> Self {
-        //willShow = handler
+    func onDidHide(_ handler: @escaping KeyboardFrameHandler) -> Self {
+        didHide = handler
         return self
     }
 }

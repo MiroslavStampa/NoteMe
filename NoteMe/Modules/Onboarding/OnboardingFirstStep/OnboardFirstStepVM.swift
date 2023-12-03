@@ -20,6 +20,6 @@ final class OnboardFirstStepVM: OnboardFirstStepViewModelProtocol {
     }
     
     func nextDidTap() {
-        
+        coordinator?.openNextStep()
     }
 }
