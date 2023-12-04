@@ -45,6 +45,8 @@
 		EDA1F54E2B165D9B007ADD1A /* OnboardSecondStepVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1F54D2B165D9B007ADD1A /* OnboardSecondStepVM.swift */; };
 		EDA9C2BA2B1CEB0A00655764 /* OnboardSecondStepCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9C2B92B1CEB0A00655764 /* OnboardSecondStepCoordinator.swift */; };
 		EDA9C2BC2B1CFAA000655764 /* OnboardSecondStepAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9C2BB2B1CFAA000655764 /* OnboardSecondStepAssembler.swift */; };
+		EDA9C2BF2B1E02AB00655764 /* MainBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9C2BE2B1E02AB00655764 /* MainBaseVC.swift */; };
+		EDA9C2C12B1E075B00655764 /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9C2C02B1E075B00655764 /* AuthVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +95,8 @@
 		EDA1F54D2B165D9B007ADD1A /* OnboardSecondStepVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardSecondStepVM.swift; sourceTree = "<group>"; };
 		EDA9C2B92B1CEB0A00655764 /* OnboardSecondStepCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardSecondStepCoordinator.swift; sourceTree = "<group>"; };
 		EDA9C2BB2B1CFAA000655764 /* OnboardSecondStepAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardSecondStepAssembler.swift; sourceTree = "<group>"; };
+		EDA9C2BE2B1E02AB00655764 /* MainBaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBaseVC.swift; sourceTree = "<group>"; };
+		EDA9C2C02B1E075B00655764 /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +234,7 @@
 		EDA1F50B2AFEA14F007ADD1A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				EDA9C2BD2B1E027800655764 /* Base ViewControllers */,
 				EDA1F53A2B164B65007ADD1A /* ParametersHelper */,
 				EDA1F5312B0D1292007ADD1A /* Coordinator */,
 				EDA1F5192B03E515007ADD1A /* KeyboardHelper */,
@@ -368,6 +373,15 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		EDA9C2BD2B1E027800655764 /* Base ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EDA9C2BE2B1E02AB00655764 /* MainBaseVC.swift */,
+				EDA9C2C02B1E075B00655764 /* AuthVC.swift */,
+			);
+			path = "Base ViewControllers";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -466,8 +480,10 @@
 				EDA1F53C2B164B8E007ADD1A /* ParametersHelper.swift in Sources */,
 				EDA1F52D2B0A78C9007ADD1A /* Label+Style.swift in Sources */,
 				EDA1F4FE2AF15F5F007ADD1A /* View+Layer.swift in Sources */,
+				EDA9C2C12B1E075B00655764 /* AuthVC.swift in Sources */,
 				EDA1F4F12AE834EB007ADD1A /* UIFont+Consts.swift in Sources */,
 				EDA1F5462B165739007ADD1A /* OnboardFirstStepAssembler.swift in Sources */,
+				EDA9C2BF2B1E02AB00655764 /* MainBaseVC.swift in Sources */,
 				EDA1F5142B03D5B3007ADD1A /* RegisterVC.swift in Sources */,
 				EDA1F54E2B165D9B007ADD1A /* OnboardSecondStepVM.swift in Sources */,
 				EDA1F4FB2AE83DE1007ADD1A /* LoginVC.swift in Sources */,

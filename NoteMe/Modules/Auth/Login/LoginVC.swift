@@ -89,7 +89,7 @@ final class LoginVC: UIViewController {
         }
         
         viewModel.catchPasswordError = {
-            self.passwordTextField.text = $0}
+            self.passwordTextField.errorText = $0}
     }
     
   //MARK: - setupUI()
