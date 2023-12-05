@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  NoteMe
+
+  Created by Miroslav Martynovich on 19.11.23.
+  
+*/
+"login" = "Войти";
+"welcome_back" = "С возвращением!";
+"new_account" = "Новый аккаунт";
+"fogot_password" = "Забыли пароль";
+"e_mail" = "E-mail";
+"enter_e_mail" = "Введите E-mail";
+"password" = "Пароль";
+"enter_password" = "Введите пароль";
+"wrong_e_mail" = "Неправильный e-mail";
+"non_valid_password" = "Неподходящий пароль";
+"cancel" = "Отмена";
+"nice_to_meet_you" = "Приятно познакомиться!";
