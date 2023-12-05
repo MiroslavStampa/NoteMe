@@ -44,6 +44,7 @@ final class LoginVM: LoginViewModelProtocol{
     }
     
     func loginDidTap(email: String?, password: String?) {
+        print(Self.self,#function, "ok")
         
         guard
             checkValidation(email: email, password: password),

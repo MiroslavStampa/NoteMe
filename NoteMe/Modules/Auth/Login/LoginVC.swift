@@ -63,9 +63,9 @@ final class LoginVC: AuthBaseVC {
     
     init(viewModel: LoginViewModelProtocol){
         self.viewModel = viewModel
-        super.init(mainButtonTitle: "Login", optionalBottomBottonTitle: "New acc", name: "name")
-        //super.init(viewModel: viewModel as! AuthViewModelProtocol)
-        //super.init(nibName: nil, bundle: nil)
+        super.init(mainButtonTitle: "login".localized,
+                   optionalBottomBottonTitle: "new_account".localized,
+                   name: "welcome_back".localized)
         
         bind()
     }
@@ -94,26 +94,25 @@ final class LoginVC: AuthBaseVC {
         
         viewModel.catchPasswordError = {
             self.passwordTextField.errorText = $0}
-        //UIButton =
-        //        .underlineYellowButton("new_account".localized)
-        //        .withAction(viewModel, #selector(LoginViewModelProtocol.newAccountDidTap))
-            
+        
+        mainButton.withAction(self, #selector(loginDidTap))
+        
         optionalBottomButton.withAction(viewModel, #selector(LoginViewModelProtocol.newAccountDidTap))
+        
     }
     
   //MARK: - setupUI()
     
     private func setupUI(){
-        view.backgroundColor = .appBlack
         
-        view.addSubview(contentView)
+//        view.addSubview(contentView)
 //        view.addSubview(newAccountButton)
 //        view.addSubview(loginButton)
         
 //        contentView.addSubview(logoImageView)
 //        contentView.addSubview(loginTitle)
         contentView.addSubview(fogotPasswordButton)
-//        contentView.addSubview(infoView)
+
         
         infoView.addSubview(fogotPasswordButton)
         infoView.addSubview(emailTextField)
@@ -124,19 +123,7 @@ final class LoginVC: AuthBaseVC {
     
     private func setupConstraints(){
         
-//        contentView.snp.makeConstraints { make in
-//            make.horizontalEdges.equalToSuperview()
-//            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-//            make.bottom.equalTo(loginButton.snp.centerY)
-//            
-//        }
-        
-//        logoImageView.snp.makeConstraints { make in
-//            make.top.equalToSuperview().inset(72.0)
-//            make.centerX.equalToSuperview()
-//            make.size.equalTo(96.0)
-//        }
-//        
+
 //        loginTitle.snp.makeConstraints { make in
 //            make.bottom.equalTo(infoView.snp.top).inset(-16.0)
 //            make.height.equalTo(24.0)
@@ -156,12 +143,7 @@ final class LoginVC: AuthBaseVC {
 //            make.height.equalTo(45.0)
 //        }
         
-//        infoView.snp.makeConstraints { make in
-//            make.centerY.equalToSuperview()
-//            make.horizontalEdges.equalToSuperview().inset(16.0)
-//            //make.height.equalTo(200.0)
-//        }
-//        
+   
         fogotPasswordButton.snp.makeConstraints { make in
             make.bottom.left.equalToSuperview().inset(16.0)
             make.height.equalTo(17.0)
@@ -185,6 +167,7 @@ final class LoginVC: AuthBaseVC {
     //MARK: - Tap handlers
     
     @objc private func loginDidTap(){
+        print(Self.self,#function, "ok")
         viewModel.loginDidTap(email: emailTextField.text, password: passwordTextField.text)
     }
 

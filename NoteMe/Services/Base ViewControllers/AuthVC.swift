@@ -39,7 +39,10 @@ class AuthBaseVC: MainBaseVC {
     init(mainButtonTitle: String,
          optionalBottomBottonTitle: String,
          name: String){
-        super.init(mainButtonTitle: mainButtonTitle, optionalBottomBottonTitle: optionalBottomBottonTitle)
+        super.init(mainButtonTitle: mainButtonTitle,
+                   optionalBottomBottonTitle: optionalBottomBottonTitle)
+        print(mainButtonTitle, optionalBottomBottonTitle)
+        self.mainTitle.text = name
     }
     
     required init?(coder: NSCoder) {
@@ -60,8 +63,6 @@ class AuthBaseVC: MainBaseVC {
   //MARK: - setupUI()
     
     private func setupUI(){
-        view.backgroundColor = .appBlack
-        
         
         contentView.addSubview(mainTitle)
         contentView.addSubview(infoView)

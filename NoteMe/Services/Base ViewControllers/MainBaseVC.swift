@@ -20,16 +20,7 @@ class MainBaseVC: UIViewController {
     lazy var contentView: UIView =
         .contentView()
     
-    
-//    private lazy var logoImageView: UIImageView =
-//        UIImageView(image: .General.logo)
-    
-//    private lazy var logoContainer: UIView = UIView()
-//    
-//    private lazy var mainTitle: UILabel =
-//        .mainTitleLabel("main_error".localized)
-    
-    private lazy var mainButton: UIButton =
+    lazy var mainButton: UIButton =
         .yellowRoudedButton("button_name_error".localized)
       //  .withAction(self, #selector(mainDidTap))
     
@@ -50,8 +41,10 @@ class MainBaseVC: UIViewController {
     init(mainButtonTitle: String,
          optionalBottomBottonTitle: String){
         super.init(nibName: nil, bundle: nil)
-        self.mainButton.titleLabel?.text = mainButtonTitle
-        self.optionalBottomButton.titleLabel?.text = optionalBottomBottonTitle
+        print(mainButtonTitle, optionalBottomBottonTitle)
+        self.mainButton.setTitle(mainButtonTitle, for: .normal)
+        self.optionalBottomButton = .underlineYellowButton(optionalBottomBottonTitle)
+       // self.optionalBottomButton.setTitle(optionalBottomBottonTitle, for: .normal)
         
     }
     
@@ -78,14 +71,10 @@ class MainBaseVC: UIViewController {
     private func setupUI(){
         view.backgroundColor = .appBlack
         
+        
         view.addSubview(contentView)
         view.addSubview(mainButton)
         view.addSubview(optionalBottomButton)
-        
-//        contentView.addSubview(mainTitle)
-//        contentView.addSubview(infoView)
-        
-//        logoContainer.addSubview(logoImageView)
         
     }
     
@@ -100,21 +89,11 @@ class MainBaseVC: UIViewController {
             
         }
         
-//        logoContainer.snp.makeConstraints { make in
-//            make.top.horizontalEdges.equalToSuperview()
-//            make.bottom.equalTo(mainTitle.snp.top)
-//        }
-//        
-//        logoImageView.snp.makeConstraints { make in
-//            make.center.equalToSuperview()
-//            make.size.equalTo(96.0)
-//        }
-        
-//        mainTitle.snp.makeConstraints { make in
-//            make.bottom.equalTo(infoView.snp.top).inset(-16.0)
-//            make.height.equalTo(24.0)
-//            make.centerX.equalToSuperview()
-//        }
+        mainButton.snp.makeConstraints { make in
+            make.bottom.equalTo(optionalBottomButton.snp.top).inset(-8.0)
+            make.horizontalEdges.equalToSuperview().inset(20.0)
+            make.height.equalTo(45.0)
+        }
         
         optionalBottomButton.snp.makeConstraints { make in
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).inset(8.0)
@@ -122,19 +101,8 @@ class MainBaseVC: UIViewController {
             make.height.equalTo(20.0)
         }
         
-        mainButton.snp.makeConstraints { make in
-            make.bottom.equalTo(optionalBottomButton.snp.top).inset(-8.0)
-            make.horizontalEdges.equalToSuperview().inset(20.0)
-            make.height.equalTo(45.0)
-        }
-        
-//        infoView.snp.makeConstraints { make in
-//            make.centerY.equalToSuperview()
-//            make.horizontalEdges.equalToSuperview().inset(16.0)
-//            //make.height.equalTo(200.0)
-//        }
-        
        
+        
         
     }
     
