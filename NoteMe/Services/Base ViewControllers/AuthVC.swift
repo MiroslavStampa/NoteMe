@@ -10,11 +10,11 @@ import UIKit
 
 import SnapKit
 
-protocol AuthViewModelProtocol: AnyObject {
-    func mainDidTap()
-    func optionalDidTap()
-    
-}
+//protocol AuthViewModelProtocol: AnyObject {
+//    func mainDidTap()
+//    func optionalDidTap()
+//    
+//}
 
 class AuthBaseVC: MainBaseVC {
     
@@ -26,16 +26,20 @@ class AuthBaseVC: MainBaseVC {
     private lazy var mainTitle: UILabel =
         .mainTitleLabel("main_error".localized)
     
-    private lazy var infoView: UIView =
-        .infoView()
+    lazy var infoView: UIView =
+            .infoView()
     
+//    private var viewModel: AuthViewModelProtocol
     
-    private var viewModel: AuthViewModelProtocol
-    
-    init(viewModel: AuthViewModelProtocol){
-        self.viewModel = viewModel
-        super.init(viewModel: viewModel as! MainViewModelProtocol)
-        
+//    init(viewModel: AuthViewModelProtocol){
+//        self.viewModel = viewModel
+//        super.init(viewModel: viewModel as! MainViewModelProtocol)
+//        
+//    }
+    init(mainButtonTitle: String,
+         optionalBottomBottonTitle: String,
+         name: String){
+        super.init(mainButtonTitle: mainButtonTitle, optionalBottomBottonTitle: optionalBottomBottonTitle)
     }
     
     required init?(coder: NSCoder) {
@@ -44,8 +48,10 @@ class AuthBaseVC: MainBaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupUI()
         setupConstraints()
+        print(Self.self,#function, " in authVC")
         
     }
  
