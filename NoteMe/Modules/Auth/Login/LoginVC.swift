@@ -82,10 +82,6 @@ final class LoginVC: AuthBaseVC {
         print(Self.self,#function,"in loginVC")
         
     }
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        view.endEditing(true)
-    }
     
     private func bind() {
         viewModel.catchEmailError = { errorText in
@@ -96,9 +92,9 @@ final class LoginVC: AuthBaseVC {
             self.passwordTextField.errorText = $0}
         
         mainButton.withAction(self, #selector(loginDidTap))
-        
-        optionalBottomButton.withAction(viewModel, #selector(LoginViewModelProtocol.newAccountDidTap))
-        
+        if let optionalBottomButton {
+            optionalBottomButton.withAction(viewModel, #selector(LoginViewModelProtocol.newAccountDidTap))
+        }
     }
     
   //MARK: - setupUI()

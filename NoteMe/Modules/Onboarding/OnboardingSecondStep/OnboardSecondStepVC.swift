@@ -12,18 +12,20 @@ import UIKit
     func dismissedByUser()
 }
 
-final class OnboardSecondStepVC: UIViewController {
+final class OnboardSecondStepVC: MainBaseVC {
     
     private var viewModel: OnboardSecondStepViewModelProtocol
     
-    private lazy var doneButton: UIButton =
-        .yellowRoudedButton("done".localized)
-        .withAction(viewModel,
-                    #selector(OnboardSecondStepViewModelProtocol.doneDidTap))
-    
+//    private lazy var doneButton: UIButton =
+//        .yellowRoudedButton("done".localized)
+//        .withAction(viewModel,
+//                    #selector(OnboardSecondStepViewModelProtocol.doneDidTap))
+//    
     init(viewModel: OnboardSecondStepViewModelProtocol) {
         self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
+        super.init(mainButtonTitle: "done".localized, optionalBottomBottonTitle: nil)
+        bind()
+       // super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -33,8 +35,8 @@ final class OnboardSecondStepVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupUI()
-        setupConstraints()
+        //setupUI()
+        //setupConstraints()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -43,16 +45,20 @@ final class OnboardSecondStepVC: UIViewController {
         viewModel.dismissedByUser()
     }
     
+    private func bind(){
+        mainButton.withAction(viewModel,
+                              #selector(OnboardSecondStepViewModelProtocol.doneDidTap))
+    }
     private func setupUI(){
         view.backgroundColor = .appGray
-        view.addSubview(doneButton)
-    }
-    private func setupConstraints(){
-        doneButton.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
-            make.horizontalEdges.equalToSuperview().inset(20.0)
-            make.height.equalTo(45.0)
-        }
+     //   view.addSubview(doneButton)
+    //}
+//    private func setupConstraints(){
+//        doneButton.snp.makeConstraints { make in
+//            make.centerY.equalToSuperview()
+//            make.horizontalEdges.equalToSuperview().inset(20.0)
+//            make.height.equalTo(45.0)
+//        }
     }
     
     

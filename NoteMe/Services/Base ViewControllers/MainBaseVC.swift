@@ -24,8 +24,8 @@ class MainBaseVC: UIViewController {
         .yellowRoudedButton("button_name_error".localized)
       //  .withAction(self, #selector(mainDidTap))
     
-     lazy var optionalBottomButton: UIButton =
-        .underlineYellowButton("optional_button_name_error".localized)
+      var optionalBottomButton: UIButton? //=
+       // .underlineYellowButton("optional_button_name_error".localized)
       //  .withAction(viewModel, #selector(LoginViewModelProtocol.newAccountDidTap))
     
     
@@ -39,13 +39,13 @@ class MainBaseVC: UIViewController {
 //        
 //    }
     init(mainButtonTitle: String,
-         optionalBottomBottonTitle: String){
+         optionalBottomBottonTitle: String?){
         super.init(nibName: nil, bundle: nil)
         print(mainButtonTitle, optionalBottomBottonTitle)
         self.mainButton.setTitle(mainButtonTitle, for: .normal)
-        self.optionalBottomButton = .underlineYellowButton(optionalBottomBottonTitle)
-       // self.optionalBottomButton.setTitle(optionalBottomBottonTitle, for: .normal)
-        
+        if let optionalBottomBottonTitle {
+            self.optionalBottomButton = .underlineYellowButton(optionalBottomBottonTitle)
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -74,8 +74,10 @@ class MainBaseVC: UIViewController {
         
         view.addSubview(contentView)
         view.addSubview(mainButton)
-        view.addSubview(optionalBottomButton)
-        
+        if let optionalBottomButton
+        {
+            view.addSubview(optionalBottomButton)
+        }
     }
     
   //MARK: - setupConstraints()
@@ -90,17 +92,22 @@ class MainBaseVC: UIViewController {
         }
         
         mainButton.snp.makeConstraints { make in
-            make.bottom.equalTo(optionalBottomButton.snp.top).inset(-8.0)
+            if let optionalBottomButton {
+                make.bottom.equalTo(optionalBottomButton.snp.top).inset(-8.0)}
+            else {
+                make.bottom.equalToSuperview().inset(8.0)
+            }
             make.horizontalEdges.equalToSuperview().inset(20.0)
             make.height.equalTo(45.0)
         }
         
-        optionalBottomButton.snp.makeConstraints { make in
-            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).inset(8.0)
-            make.horizontalEdges.equalToSuperview().inset(20.0)
-            make.height.equalTo(20.0)
+        if let optionalBottomButton {
+            optionalBottomButton.snp.makeConstraints { make in
+                make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).inset(8.0)
+                make.horizontalEdges.equalToSuperview().inset(20.0)
+                make.height.equalTo(20.0)
+            }
         }
-        
        
         
         

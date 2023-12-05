@@ -22,7 +22,7 @@ final class OnboardFirstStepCoordinator: Coordinator {
 }
 extension OnboardFirstStepCoordinator: OnboardFirstStepCoordinatorProtocol {
     func openNextStep() {
-    let coordinator = OnboardFirstStepCoordinator()
+    let coordinator = OnboardSecondStepCoordinator()
     children.append(coordinator)
     
     coordinator.onDidFinish = { [weak self] coordinator in

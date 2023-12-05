@@ -23,6 +23,7 @@ final class OnboardingFirstStepVC: UIViewController {
     init(viewModel: OnboardFirstStepViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+       // bind()
     }
     
     required init?(coder: NSCoder) {
