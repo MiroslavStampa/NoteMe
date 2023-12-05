@@ -12,18 +12,17 @@ import SnapKit
     func nextDidTap()
 }
 
-final class OnboardingFirstStepVC: UIViewController {
+final class OnboardingFirstStepVC: AuthBaseVC {
     
     private var viewModel: OnboardFirstStepViewModelProtocol
     
-    private lazy var nextButton: UIButton =
-        .yellowRoudedButton("next".localized)
-        .withAction(viewModel, #selector(OnboardFirstStepViewModelProtocol.nextDidTap))
-    
+  
     init(viewModel: OnboardFirstStepViewModelProtocol) {
         self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
-       // bind()
+        super.init(mainButtonTitle: "next".localized,
+                   optionalBottomBottonTitle: nil,
+                   name: "welcome".localized)
+        bind()
     }
     
     required init?(coder: NSCoder) {
@@ -33,19 +32,24 @@ final class OnboardingFirstStepVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupUI()
-        setupConstraints()
+//        setupUI()
+//        setupConstraints()
     }
-    private func setupUI(){
-        view.backgroundColor = .appGray
-        view.addSubview(nextButton)
+    private func bind(){
+        
+        mainButton.withAction(viewModel, #selector(OnboardFirstStepViewModelProtocol.nextDidTap))
+        
     }
-    private func setupConstraints(){
-        nextButton.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
-            make.horizontalEdges.equalToSuperview().inset(20.0)
-            make.height.equalTo(45.0)
-        }
-    }
+//    private func setupUI(){
+//        view.backgroundColor = .appGray
+//        view.addSubview(nextButton)
+//    }
+//    private func setupConstraints(){
+//        nextButton.snp.makeConstraints { make in
+//            make.centerY.equalToSuperview()
+//            make.horizontalEdges.equalToSuperview().inset(20.0)
+//            make.height.equalTo(45.0)
+//        }
+//   }
 }
 

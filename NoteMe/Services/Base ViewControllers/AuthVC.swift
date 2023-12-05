@@ -22,6 +22,7 @@ class AuthBaseVC: MainBaseVC {
         UIImageView(image: .General.logo)
     
     private lazy var logoContainer: UIView = UIView()
+    lazy var bottomContainer: UIView = UIView()
     
     private lazy var mainTitle: UILabel =
         .mainTitleLabel("main_error".localized)
@@ -37,7 +38,7 @@ class AuthBaseVC: MainBaseVC {
 //        
 //    }
     init(mainButtonTitle: String,
-         optionalBottomBottonTitle: String,
+         optionalBottomBottonTitle: String?,
          name: String){
         super.init(mainButtonTitle: mainButtonTitle,
                    optionalBottomBottonTitle: optionalBottomBottonTitle)
@@ -67,8 +68,10 @@ class AuthBaseVC: MainBaseVC {
         contentView.addSubview(mainTitle)
         contentView.addSubview(infoView)
         contentView.addSubview(logoContainer)
+        contentView.addSubview(bottomContainer)
         
         logoContainer.addSubview(logoImageView)
+       // bottomContainer.addSubview()
         
     }
     
@@ -97,6 +100,12 @@ class AuthBaseVC: MainBaseVC {
             make.centerY.equalToSuperview()
             make.horizontalEdges.equalToSuperview().inset(16.0)
             //make.height.equalTo(200.0)
+        }
+        
+        bottomContainer.snp.makeConstraints { make in
+            make.top.equalTo(infoView.snp.bottom).inset(16.0)
+            make.bottom.equalTo(mainButton.snp.top).inset(16.0)
+            make.horizontalEdges.equalToSuperview()
         }
         
        

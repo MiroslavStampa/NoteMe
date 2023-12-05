@@ -12,20 +12,14 @@ import UIKit
     func dismissedByUser()
 }
 
-final class OnboardSecondStepVC: MainBaseVC {
+final class OnboardSecondStepVC: AuthBaseVC {
     
     private var viewModel: OnboardSecondStepViewModelProtocol
     
-//    private lazy var doneButton: UIButton =
-//        .yellowRoudedButton("done".localized)
-//        .withAction(viewModel,
-//                    #selector(OnboardSecondStepViewModelProtocol.doneDidTap))
-//    
     init(viewModel: OnboardSecondStepViewModelProtocol) {
         self.viewModel = viewModel
-        super.init(mainButtonTitle: "done".localized, optionalBottomBottonTitle: nil)
+        super.init(mainButtonTitle: "done".localized, optionalBottomBottonTitle: nil, name: "different_types".localized)
         bind()
-       // super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
