@@ -38,5 +38,10 @@ extension LoginCoordinator: LoginCoordinatorProtocol {
     func openResetModule() {
         
     }
+    
+    func showAlert(_ alert: UIAlertController) {
+        print("show alert")
+        rootVC?.present(alert, animated: true)
+    }
 
 }

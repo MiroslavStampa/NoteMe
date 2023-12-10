@@ -11,6 +11,7 @@ protocol LoginCoordinatorProtocol: AnyObject {
     func finish()
     func openRegisterModule()
     func openResetModule()
+    func showAlert(_ alert: UIAlertController)
 }
 
 protocol LoginInputValidatorUseCase {
@@ -55,6 +56,10 @@ final class LoginVM: LoginViewModelProtocol{
             if isSuccess {
                 ParametersHelper.set(.authenticated, value: true)
                 coordinator?.finish()
+            } else {
+                let alertVC = AlertBuilder.build(title: "error".localized, message: "Invalid e-mail or password", okTitle: "Ok")
+                coordinator?.showAlert(alertVC)
+
             }
         }
         
